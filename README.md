@@ -1,59 +1,32 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Catalog of Things
 
-# Project Name
+> Work in progress
+## Prerequisites
 
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+Ruby >= 3.0.0
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Run git clone on this project at the desired directory:
+   ```
+   git clone https://github.com/zainsadaqat/ruby-capstone.git
+   ```
+- Go to the cloned directory with `cd ruby-capstone`
+- With Ruby installed in your environment, you can run `ruby main.rb` to see some tests going on with the code
 
 ## Authors
 
-👤 **Author1**
+👤 **Mouaz El Molkey**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [![@iammouaz](https://img.shields.io/github/followers/iammouaz?color=lightgray&style=plastic&labelColor=blue)](https://github.com/iammouaz)
+- Twitter: [![@iammouaz](https://img.shields.io/twitter/follow/MoazMulki1?style=plastic&labelColor=blue)](https://www.twitter.com/MoazMulki1/)
+- LinkedIn: [![@iammouaz](https://img.shields.io/badge/LinkedIn-blue?style=plastic&logo=linkedin)](https://www.linkedin.com/in/mouaz-molki/)
 
-👤 **Author2**
+👤 **Zain Sadaqat**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: 
+- Twitter: 
+- LinkedIn:
 
 ## 🤝 Contributing
 
@@ -67,10 +40,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.

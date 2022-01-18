@@ -48,12 +48,8 @@ class App
     case option
     when '1'
       puts 'Listing all books'
-      # @var = Books.new(Author, Title)
-      # @var.list
     when '2'
       puts 'Listing all music albums'
-      # @var = MusicAlbum.new(Author, Title)
-      # @var.list
     when '3'
       puts 'Listing all movies'
     when '4'

@@ -1,6 +1,5 @@
-# Catalog of Things
+# Ruby Capstone
 
-> Work in progress
 ## Prerequisites
 
 Ruby >= 3.0.0

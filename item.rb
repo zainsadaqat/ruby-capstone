@@ -23,4 +23,19 @@ class Item
     source.items.push(self) unless source.items.include?(self)
   end
 
+  def add_label(label)
+    @label = label
+    label.items.push(self) unless label.items.include?(self)
+  end
+
+  def move_to_archive
+    @archived = can_be_archived?
+  end
+
+  private
+
+  def can_be_archived
+    current_date = Date.today
+    current_date.year - publish_date.year > 10
+  end
 end

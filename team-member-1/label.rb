@@ -12,6 +12,7 @@ class Label < Item
   def add_item(item)
     item.add_label(self)
     @items.push(self) unless @items.include?(item)
+    "Item added successfully"
   end
 
   def to_s

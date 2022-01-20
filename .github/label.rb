@@ -1,2 +1,0 @@
-class Label < Item
-end

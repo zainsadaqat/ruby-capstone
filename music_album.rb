@@ -1,3 +1,7 @@
+require 'json'
+require './music_album'
+require './genre_methods'
+require './changes'
 
 class MusicAlbumHandler
   include Changes

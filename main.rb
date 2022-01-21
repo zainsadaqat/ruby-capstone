@@ -15,8 +15,8 @@ class App
       '1' => 'List all books', '2' => 'List all music albums',
       '3' => 'List all movies', '5' => 'List all genres',
       '6' => 'List all labels', '9' => 'Add a book',
-      '10' => 'Add a music album', '11' => 'Add a movie',
-      '0' => 'Save and exit'
+      '10' => 'Add a music album','0' => 'Save and exit'
+
     }
   end
 
@@ -70,8 +70,6 @@ class App
       @books_manager.add_book
     when 10
       @music_album_handler.create_music_album(@genre_handler)
-    when 11
-      puts 'Adding a movie'
     else
       puts 'Not a valid option'
     end

@@ -1,9 +1,14 @@
-# Catalog of Things
+# Ruby Capstone
 
-> Work in progress
 ## Prerequisites
 
 Ruby >= 3.0.0
+
+## Video Demo
+
+[Link](https://drive.google.com/file/d/1wZowxh7mr1Csppcyh-NrmzoYtrqOGymI/view?usp=sharing)
+
+
 
 ## Getting Started
 

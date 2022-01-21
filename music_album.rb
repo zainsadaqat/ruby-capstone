@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'json'
 require './music_album'
 require './genre_methods'

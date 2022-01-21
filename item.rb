@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Item
   attr_reader id
   attr_accessor genre, author, source, label, publish_date

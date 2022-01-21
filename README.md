@@ -4,6 +4,12 @@
 
 Ruby >= 3.0.0
 
+## Video Demo
+
+[Link](https://drive.google.com/file/d/1wZowxh7mr1Csppcyh-NrmzoYtrqOGymI/view?usp=sharing)
+
+
+
 ## Getting Started
 
 - Run git clone on this project at the desired directory:

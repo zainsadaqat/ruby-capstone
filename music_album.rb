@@ -1,73 +1,24 @@
-require 'json'
-require './music_album'
-require './genre_methods'
-require './changes'
+require_relative 'item'
 
-class MusicAlbumHandler
-  include Changes
-  attr_reader :music_albums
+class MusicAlbum < Item
+  attr_accessor :publish_date, :on_spotify, :archived
 
-  def initialize
-    @music_albums = []
+  def initialize(id:, publish_date:, archived: false, on_spotify: false)
+    super(id: id, publish_date: publish_date, archived: archived)
+    @on_spotify = on_spotify
   end
 
-  def save
-    File.write('data/music_album.json', JSON.generate(@music_albums.map(&:to_json))) unless @music_albums.empty?
+  def can_be_archived?
+    super && @on_spotify
   end
 
-  def load(genre_handler)
-    file = 'data/music_album.json'
-    if File.exist?(file)
-      JSON.parse(File.read(file)).map do |data|
-        music_album = MusicAlbum.new(id: data['id'], publish_date: data['publish_date'])
-        music_album.add_genre(genre_handler.get_genre_from_id(data['genre_id']))
-        @music_albums.push(music_album)
-      end
-    else
-      []
-    end
+  def to_s
+    "[Music Album] #{super} - On Spotify? #{@on_spotify}"
   end
 
-  def add_music_album(music_album)
-    @music_albums.push(music_album)
-  end
-
-  def create_music_album(genre_handler)
-    puts ''
-    puts 'Creating Music Album...'
-    print 'Published date: '
-    publish_date = gets.chomp
-    print 'On Spotify? [Y/N]: '
-    on_spotify = gets.chomp
-    print 'Archived? [Y/N]: '
-    archived = gets.chomp
-    music_album = MusicAlbum.new(id: nil, publish_date: publish_date, on_spotify: change_input(on_spotify))
-    if change_input(archived)
-      music_album.move_to_archive
-      puts "It wasn't possible to archive this Music Album" if change _input(archived) != music_album.archived
-    end
-    puts "1) Create a new genre to use \n2) List and use an existing genre\n3) Create without genre"
-    option = gets.chomp
-    genre = prompt_genre(option, genre_handler)
-    music_album.add_genre(genre)
-    genre_handler.add_genre(genre) unless genre_handler.genres.include?(genre)
-    @music_albums.push(music_album)
-    puts 'Music Album created!'
-  end
-
-  def prompt_genre(option, genre_handler)
-    case option
-    when '1'
-      genre_handler.create_genre
-    when '2'
-      genre_handler.list_genre_with_index
-      genre_index = gets.chomp
-      genre_handler.get_genre_from_index(genre_index)
-    when '3'
-      puts 'Creating Music Album without genre'
-      nil
-    else
-      puts 'Invalid option, aborting genre creation'
-    end
+  def to_json(_options = {})
+    super.merge({
+                  'on_spotify' => @on_spotify
+                })
   end
 end
